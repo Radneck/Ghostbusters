@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,24 +10,148 @@
   <link rel="stylesheet" href="./css/style_ghost.css">
   <title>Охотники за приведениями</title>
 </head>
+
 <body>
   <header class="header">
-    <div class="container header-container">
-      <div class="header-logo">
-        <img src="./img/Logo.png" alt="film_logo">
-      </div>
-      <input class="header-search" type="text" placeholder="Поиск по фильмам">
-      <nav class="header-navogation">
-        <a href="#" class="header-nav-link">Фильмы</a>
-        <a href="#" class="header-nav-link">ТВ</a>
-        <a href="#" class="header-nav-link">Новости</a>
-        <a href="#" class="header-nav-link">О сервисе</a>
-      </nav>
-      <div class="btn-group">
-        <button class="btn reg-btn">Регистрация</button>
-        <button class="btn enter-btn">Войти</button>
-      </div>
+    <div class="header-logo">
+      <img src="./img/Logo.png" alt="film_logo">
+    </div>
+    <input class="header-search" type="text" placeholder="Поиск по фильмам">
+    <nav class="header-navogation">
+      <a href="#" class="header-nav-link">Фильмы</a>
+      <a href="#" class="header-nav-link">ТВ</a>
+      <a href="#" class="header-nav-link">Новости</a>
+      <a href="#" class="header-nav-link">О сервисе</a>
+    </nav>
+    <div class="btn-group">
+      <button class="btn reg-btn">Регистрация</button>
+      <button class="btn enter-btn">Войти</button>
     </div>
   </header>
+
+  <section class="hero">
+    <div class="container hero-container">
+      <div class="hero-wrapper">
+        <section class="hero-trailer">
+          <img src="./img/poster.jpg" alt="Постер" class="hero-trailer-poster">
+          <button class="hero-trailer-btn">
+            <img src="./img/play_btn.svg" class="hero-btn-icon" alt="Кнопка">
+            <span class="hero-btn-text">Посмотреть трейлер</span>
+          </button>
+        </section>
+        <section class="hero-text">
+          <h1 class="hero-text-title">
+            Охотники за приведениями: <br> Наследники 
+          </h1>
+          <span class="hero-text-subtitle">Ghostbusters: Afterlife</span>
+          <p class="hero-text-description">
+            Мать-одиночка с двумя детьми-подростками селится на старой ферме в&nbsp;Оклахоме, полученной в наследство от отца, которого
+            она не знала. Дети пытаются больше узнать о своем деде и находят автомобиль Ecto-1, принадлежавший знаменитым охотникам
+            за привидениями.
+          </p>
+          <table class="hero-text-table">
+            <tr class="hero-table-row">
+              <th class="hero-table-head">Режиссер</th>
+              <td>Джейсон Райтман</td>
+              <th class="hero-table-head">Бюджет</th>
+              <td>1 000 000 $</td>
+            </tr>
+            <tr class="hero-table-row"> 
+              <th class="hero-table-head">Сценарий</th>
+              <td>Дэн Эйкройд</td>
+              <th class="hero-table-head">Кинопрокат</th>
+              <td>SPPR</td>
+            </tr>
+            <tr class="hero-table-row">
+              <th class="hero-table-head">Премьера</th>
+              <td>09.07.2020 (РФ)</td>
+              <th class="hero-table-head">Премьера</th>
+              <td>09.07.2020 (РФ)</td>
+            </tr>
+          </table>
+          <div class="hero-rating">
+            <div class="hero-rating-counter">
+              92%
+            </div>
+            <div class="hero-rating-text">
+              <h3 class="hero-rating-title">Рейтинг зрителей</h3>
+              <span class="hero-rating-score">Средняя оценка: <strong class="bold">4,5/5</strong></span>
+              <span class="hero-rating-score">Всего голосов: <strong class="bold">4 350</strong></span>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="cast">
+    <div class="container cast-container">
+      <div class="cast-tabs">
+        <h2 class="cast-title active">Актеры</h2>
+        <h2 class="cast-title">Создатели</h2>
+      </div>
+      <div class="cast-tabs-content">
+        <div class="tab-content-card">
+          <img src="./img/actors/Actor_1.png" alt="" class="tab-card-img">
+          <div class="tab-card-text">
+            <h3 class="name">Кэрри Кун</h3>
+            <span class="en-name">Carrie Coon</span>
+          </div>
+        </div>
+        <div class="tab-content-card">
+          <img src="./img/actors/Actor_2.png" alt="" class="tab-card-img">
+          <div class="tab-card-text">
+            <h3 class="name">Билл Мюррей</h3>
+            <span class="en-name">Bill Murray</span>
+          </div>
+        </div>
+        <div class="tab-content-card">
+          <img src="./img/actors/Actor_3.png" alt="" class="tab-card-img">
+          <div class="tab-card-text">
+            <h3 class="name">Пол Радд</h3>
+            <span class="en-name">Paul Rudd</span>
+          </div>
+        </div>
+        <div class="tab-content-card">
+          <img src="./img/actors/Actor_4.png" alt="" class="tab-card-img">
+          <div class="tab-card-text">
+            <h3 class="name">Энни Поттс</h3>
+            <span class="en-name">Annie Potts</span>
+          </div>
+        </div>
+        <div class="tab-content-card">
+          <img src="./img/actors/Actor_5.png" alt="" class="tab-card-img">
+          <div class="tab-card-text">
+            <h3 class="name">МакКенна Грейс</h3>
+            <span class="en-name">Mckenna Grace</span>
+          </div>
+        </div>
+        <div class="tab-content-card">
+          <img src="./img/actors/Actor_6.png" alt="" class="tab-card-img">
+          <div class="tab-card-text">
+            <h3 class="name">Дэн Эйкройд</h3>
+            <span class="en-name">Dan Aykroyd</span>
+          </div>
+        </div>
+        <div class="tab-content-card">
+          <img src="./img/actors/Actor_7.png" alt="" class="tab-card-img">
+          <div class="tab-card-text">
+            <h3 class="name">Эрни Хадсон</h3>
+            <span class="en-name">Ernie Hudson</span>
+          </div>
+        </div>
+        <div class="tab-content-card">
+          <img src="./img/actors/Actor_7.png" alt="" class="tab-card-img">
+          <div class="tab-card-text">
+            <h3 class="name">Финн Вулфард</h3>
+            <span class="en-name">Finn Wolfhard</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 </body>
+
 </html>
