@@ -15,6 +15,30 @@ html, body {
   cursor: pointer;
 }
 
+.mobile-btn-group {
+  display: none;
+}
+
+.mobile-gamb-menu, .mobile-search-btn {
+  padding: 5px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.menu-line {
+  display: block;
+  height: 2px;
+  background-color: black;
+  width: 16px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  border-radius: 40px;
+}
+
 .container {
   max-width: 1130px;
   margin: 0 auto;
@@ -36,9 +60,20 @@ html, body {
 
 .header-logo {
   height: 100%;
-  padding-top: 25px;
-  padding-right: 35px;
-  border-right: 1px solid #D4D4D4;
+}
+
+.header-logo img {
+  padding-bottom: 32px;
+  padding-left: 32px;
+}
+
+.header-logo::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 1px;
+  background-color: #d4d4d4;
+  margin-left: 34px;
 }
 
 .header-search {
@@ -235,7 +270,6 @@ html, body {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-
 }
 
 .tab-content-card {
@@ -263,4 +297,204 @@ html, body {
 
 .en-name {
   color: #A5A5A5;
+}
+
+.news {
+  background-color: #f3f3f3;
+  padding-top: 70px;
+  padding-bottom: 100px;
+}
+
+.news-head {
+  margin-bottom: 65px;
+}
+
+.news-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.news-item {
+  flex-basis: 23%;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 5px
+}
+
+.news-date, .news-title {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.news-title {
+  margin-top: 14px;
+}
+
+@media (max-width: 1200px) {
+  .header {
+    height: 90px;
+  }
+  .header-navogation {
+    margin-right: 20px;
+  }
+  .header-search {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .header-nav-link {
+    margin-right: 10px;
+  }
+  .reg-btn {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .container {
+    max-width: 960px;
+  }
+  .tab-card-img {
+    width: 70px;
+    height: 70px;
+  }
+  .header-logo::after {
+    margin-left: 20px;
+  }
+  .header-navogation {
+    display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .enter-btn {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .container {
+    max-width: 760px;
+  }
+  .hero-text-title {
+    font-size: 24px;
+    line-height: 1.4;
+  }
+  .hero-text-subtitle {
+    margin-bottom: 20px;
+  }
+  .hero-text-description, .hero-text-table {
+    margin-bottom: 30px;
+  }
+  .tab-content-card {
+    flex-basis: 50%;
+  }
+  .news-item {
+    flex-basis: 48%;
+    margin-bottom: 2%;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    height: 80px;
+  }
+  .header-search {
+    width: 30%;
+    margin: 0;
+    padding-left: 20px;
+  }
+  .reg-btn {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .container {
+    max-width: 560px;
+  }
+  .hero-wrapper {
+    flex-wrap: wrap;
+  }
+  .hero {
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+  .hero-text {
+    order: -1;
+    margin-bottom: 30px;
+  }
+  .cast, .news {
+    padding-top: 50px;
+    padding-bottom: 70px;
+  }
+}
+
+@media (max-width: 584px) {
+  .header {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+  .header-logo {
+    width: 150px;
+  }
+  .header-logo img {
+    width: 70%;
+    padding-top: 25px;
+    padding-left: 20px;
+  }
+  .header-logo:after {
+    display: none;
+  }
+  .btn-group {
+    display: none;
+  }
+  .header-search {
+    display: none;
+    /* width: 16px;
+    height: 16px; */
+  }
+  .header-search:focus {
+    width: auto;
+  }
+  .mobile-btn-group {
+    display: block;
+  }
+  .container {
+    width: 95%;
+  }
+  .hero-text-title {
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 12px;
+  }
+  .hero-text-subtitle {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 26px;
+  }
+  .hero-text-description {
+    font-size: 14px;
+    line-height: 150%;
+    margin-bottom: 40px;
+  }
+  .hero-trailer, .hero-trailer-poster {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .hero-text {
+    order: 1;
+    margin-bottom: 0;
+  }
+  .cast {
+    padding-bottom: 50px;
+  }
+  .tab-content-card {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+  .tab-card-img {
+    width: 60px;
+    height: 60px;
+  }
+  .cast-tabs {
+    margin-bottom: 35px;
+  }
+  .news-item {
+    flex-basis: 100%;
+  }
 }
