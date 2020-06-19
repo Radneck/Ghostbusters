@@ -10,6 +10,14 @@ html, body {
   color: #363636;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
+.swiper-container {
+  display: flex;
+}
+
 .btn {
   height: 100%;
   cursor: pointer;
@@ -17,6 +25,7 @@ html, body {
 
 .mobile-btn-group {
   display: none;
+  margin-left: auto;
 }
 
 .mobile-gamb-menu, .mobile-search-btn {
@@ -47,7 +56,7 @@ html, body {
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   /* max-width: 1440px; */
   /* margin: 0 auto; */
   height: 104px;
@@ -59,13 +68,16 @@ html, body {
 }
 
 .header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100%;
 }
 
-.header-logo img {
+/* .header-logo img {
   padding-bottom: 32px;
   padding-left: 32px;
-}
+} */
 
 .header-logo::after {
   content: "";
@@ -74,6 +86,13 @@ html, body {
   width: 1px;
   background-color: #d4d4d4;
   margin-left: 34px;
+}
+
+.header-mobile-menu {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
 }
 
 .header-search {
@@ -94,13 +113,15 @@ html, body {
 .header-nav-link {
   text-decoration: none;
   color: #363636;
-}
-
-.header-nav-link:not(:last-child) {
   margin-right: 20px;
 }
 
+.header-nav-link:last-child {
+  margin-right: 0;
+}
+
 .btn-group {
+  display: flex;
   height: 100%;
 }
 
@@ -153,6 +174,7 @@ html, body {
   padding-top: 25px;
   padding-bottom: 25px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .hero-btn-icon {
@@ -254,6 +276,10 @@ html, body {
   margin-bottom: 60px;
 }
 
+.tab {
+  cursor: pointer;
+}
+
 .cast-title {
   font-size: 24px;
   line-height: 28px;
@@ -267,11 +293,16 @@ html, body {
 }
 
 .cast-tabs-content {
-  display: flex;
+  display: none;
   align-items: center;
   flex-wrap: wrap;
+  visibility: hidden;
 }
 
+.cast-tabs-content.visible {
+  display: flex;
+  visibility: visible;
+} 
 .tab-content-card {
   flex-basis: 25%;
   display: flex;
@@ -329,9 +360,21 @@ html, body {
 
 .news-title {
   margin-top: 14px;
+  margin-bottom: 0;
 }
 
-@media (max-width: 1200px) {
+.btn-next {
+  background-color: transparent;
+  border: none;
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99;
+}
+
+@media (max-width: 1220px) {
   .header {
     height: 90px;
   }
@@ -392,17 +435,65 @@ html, body {
 }
 
 @media (max-width: 768px) {
-  header {
+  .header {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
     height: 80px;
   }
+  .header-logo:after {
+    display: none;
+  }
+  .header-mobile-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    left: 0;
+    top: 80px;
+    right: 0;
+    bottom: 0;
+    background-color: #5671F6;
+  }
+  .header-mobile-menu.active {
+    display: flex;
+  }
   .header-search {
-    width: 30%;
+    width: 260px;
+    height: 50px;
+    border-radius: 5px;
     margin: 0;
-    padding-left: 20px;
+    padding-left: 0;
+    border: none;
+    background-image: none;
+    text-align: center;
+  }
+  .header-navogation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  .header-nav-link {
+    color: #fff;
+    margin-right: 0;
+  }
+  .header-nav-link:not(:last-child) {
+    margin-bottom: 18px;
+  }
+  .btn-group {
+    height: auto;
+    flex-direction: column;
   }
   .reg-btn {
-    padding-left: 10px;
-    padding-right: 10px;
+    margin-bottom: 30px;
+    background-color: transparent;
+    color: white;
+    border: none;
+  }
+  .mobile-btn-group {
+    display: block;
   }
   .container {
     max-width: 560px;
@@ -422,27 +513,21 @@ html, body {
     padding-top: 50px;
     padding-bottom: 70px;
   }
+  .news-item {
+    max-width: 90%;
+  }
+  .btn-next {
+    display: block;
+  }
 }
 
 @media (max-width: 584px) {
-  .header {
-    padding-left: 2.5%;
-    padding-right: 2.5%;
-  }
   .header-logo {
     width: 150px;
   }
-  .header-logo img {
-    width: 70%;
-    padding-top: 25px;
-    padding-left: 20px;
-  }
-  .header-logo:after {
+  /* .btn-group {
     display: none;
-  }
-  .btn-group {
-    display: none;
-  }
+  } */
   .header-search {
     display: none;
     /* width: 16px;
@@ -450,9 +535,6 @@ html, body {
   }
   .header-search:focus {
     width: auto;
-  }
-  .mobile-btn-group {
-    display: block;
   }
   .container {
     width: 95%;
@@ -472,9 +554,12 @@ html, body {
     line-height: 150%;
     margin-bottom: 40px;
   }
-  .hero-trailer, .hero-trailer-poster {
+  .hero-trailer {
     width: 100%;
     margin-bottom: 30px;
+  }
+  .hero-trailer-poster {
+    width: 100%;
   }
   .hero-text {
     order: 1;
